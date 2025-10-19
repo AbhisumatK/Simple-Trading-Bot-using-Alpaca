@@ -7,9 +7,9 @@ from alpaca_trade_api import REST
 from timedelta import Timedelta
 from finbert_utils import estimate_sentiment
 
-API_Key = 'PKJ46DSHFGMWHMTKPZ6YEO5FEP'
-API_Secret = '9cuNyWcbfFVWjXaQYPD7vcPYXjKoTSwAi9KJnG1QfyYA'
-Base_URL = 'https://paper-api.alpaca.markets/v2'
+API_Key = 'API_KEY'
+API_Secret = 'API_SECRET'
+Base_URL = 'BASE_URL'
 
 Alpaca_Creds = {
     'API_KEY': API_Key,
@@ -85,4 +85,5 @@ end_date = datetime(2024, 10, 9)
 broker = Alpaca(Alpaca_Creds)
 
 strategy = ML_Trader(name='mlstrat', broker=broker, parameters={'symbol': 'SPY', 'cash_at_risk': 0.5})
+
 strategy.backtest(YahooDataBacktesting, start_date, end_date, parameters={'symbol': 'SPY', 'cash_at_risk': 0.5})
