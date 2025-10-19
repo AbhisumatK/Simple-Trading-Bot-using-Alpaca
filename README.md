@@ -1,1 +1,1 @@
-# Simple-Trading-Bot-using-Alpaca
+# Simple-Trading-Bot using Alpaca
